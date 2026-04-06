@@ -1,6 +1,5 @@
 import fs from 'fs';
 import { exec } from 'child_process';
-import directories from "./workspace.json" with { type: 'json' };
 
 function open(dir) {
   process.chdir(`${dir}`);
