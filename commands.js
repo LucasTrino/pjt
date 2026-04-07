@@ -1,37 +1,40 @@
 import { program } from "commander";
-import dirOp from "./directoriesCommands.js"
-import directories from "./workspace.json" with { type: 'json' };
+import workspace from "./workspace/index.js";
 
 function init() {
   program
-    .name('pjt')
+    .name('workspaceCLI')
     .description('Just a CLI test')
     .version('1.0.0');
 
   program.command('open')
-    .option('-d, --dir <name...>', 'Abrir diretório de "name"')
-    .action((name, options) => {
-
-      for (let i = 0; name.dir.length > i; i++) {
-        const key = name.dir[i];
-        const value = directories[key];
-
-        dirOp.open(value);
-      }
-
-
+    .option('-d, --dir <name...>', 'Abrir diretório')
+    .action((name) => {
+      workspace.open(name.dir)
     });
 
   program.command('add')
     .argument('<path>', 'Caminho diretório')
     .option('-n, --name <value>', 'Nome do diretório ao Workspace')
     .action((path, options) => {
-      const counter = Object.keys(directories).lenght;
-      const key = options.name ?
-        options.name :
-        `${key}-${counter}`;
+      workspace.add(path, options)
+    })
 
-      dirOp.addDirectory(key, path);
+  program.command('delete')
+    .argument('<name>', 'Nome diretório')
+    .action((name) => {
+      workspace.deleteDir(name)
+    })
+
+  program.command('list')
+    .action(() => {
+      workspace.list()
+    })
+
+  program.command('getPath')
+    .argument('<name>', 'Nome diretório')
+    .action((name) => {
+      workspace.getPath(name)
     })
 
   program.parse(process.argv);
