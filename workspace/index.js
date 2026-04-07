@@ -4,11 +4,19 @@ import directoriesHandler from "../directoriesHandler/index.js"
 import directories from "../workspace/directories.json" with { type: 'json' };
 
 function open(name) {
-  for (let i = 0; name.length > i; i++) {
-    const key = name[i];
-    const value = directories[key];
+  if (typeof name === 'undefined' || name === null)
+    directoriesHandler.open();
 
+  if (typeof name === 'string')
     directoriesHandler.open(value);
+
+  if (Array.isArray(name)) {
+    for (let i = 0; name.length > i; i++) {
+      const key = name[i];
+      const value = directories[key];
+
+      directoriesHandler.open(value);
+    }
   }
 }
 
@@ -69,11 +77,11 @@ function list() {
 function getPath(name) {
   const path = directories[name];
 
-  const message = !!path ?
+  const value = !!path ?
     path :
-    'Diretório não encontrado'
+    null
 
-  console.log(message);
+  return value;
 }
 
 export default {

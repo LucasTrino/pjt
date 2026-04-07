@@ -1,7 +1,8 @@
 import { exec } from 'child_process';
 
 function open(dir) {
-  process.chdir(`${dir}`);
+  if (typeof dir !== 'undefined' || dir === null)
+    navigateTo(dir);
 
   try {
     exec('start .', (err, stdout, stderr) => {
@@ -21,7 +22,11 @@ function open(dir) {
   }
 }
 
+function navigateTo(dir) {
+  process.chdir(`${dir}`);
+}
 
 export default {
   open,
+  navigateTo
 }

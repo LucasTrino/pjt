@@ -1,9 +1,11 @@
 import { program } from "commander";
+
 import workspace from "./workspace/index.js";
+import directoriesHandler from "./directoriesHandler/index.js "
 
 function init() {
   program
-    .name('workspaceCLI')
+    .name('wkSp')
     .description('Just a CLI test')
     .version('1.0.0');
 
@@ -34,7 +36,27 @@ function init() {
   program.command('getPath')
     .argument('<name>', 'Nome diretório')
     .action((name) => {
-      workspace.getPath(name)
+      const message =
+        workspace.getPath(name) !== null ?
+          workspace.getPath(name) :
+          'Diretório não encontrado';
+
+      console.log(message)
+    })
+
+  program.command('navigateTo')
+    .argument('<name>', 'Nome diretório')
+    .action((name) => {
+      const path = workspace.getPath(name);
+
+      if (path !== null) {
+        directoriesHandler.navigateTo(path);
+        console.log(`Diretório atual - ${path}`)
+
+        return;
+      }
+
+      console.log('Diretório não encontrado.')
     })
 
   program.parse(process.argv);
