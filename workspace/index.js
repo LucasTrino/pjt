@@ -52,7 +52,7 @@ function deleteDir(name) {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       console.error('Erro ao ler o arquivo JSON:', err);
-      return;
+      return false;
     }
 
     delete directories[name];
@@ -60,10 +60,11 @@ function deleteDir(name) {
     fs.writeFile(filePath, JSON.stringify(directories, null, 2), (err) => {
       if (!err) {
         console.log(`Diretório '${name}' deletado com sucesso!`);
-        return
+        return true;
       }
 
       console.error('Erro ao escrever no arquivo JSON:', err);
+      return false;
     });
   });
 }
