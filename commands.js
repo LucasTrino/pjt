@@ -30,7 +30,11 @@ function init() {
 
   program.command('list')
     .action(() => {
-      workspace.list()
+      const dirs = workspace.getDirs()
+
+      for (const dir in dirs) {
+        console.log(`${dir} - ${dirs[dir]}`)
+      }
     })
 
   program.command('getPath')

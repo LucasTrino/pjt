@@ -3,7 +3,7 @@ import fs from 'fs';
 import directoriesHandler from "../directoriesHandler/index.js"
 import directories from "../workspace/directories.json" with { type: 'json' };
 
-function open(name) {
+function open(name = null) {
   if (typeof name === 'undefined' || name === null)
     directoriesHandler.open();
 
@@ -33,7 +33,7 @@ function add(path, options) {
       return;
     }
 
-    directories[key] = path;
+    directories[key].path = path;
 
     fs.writeFile(filePath, JSON.stringify(directories, null, 2), (err) => {
       if (!err) {
@@ -46,7 +46,7 @@ function add(path, options) {
   });
 }
 
-function deleteDir(name) {
+function deleteDiretories(name) {
   const filePath = "./workspace/directories.json";
 
   fs.readFile(filePath, 'utf8', (err, data) => {
@@ -69,14 +69,12 @@ function deleteDir(name) {
   });
 }
 
-function list() {
-  for (const dir in directories) {
-    console.log(`${dir} - ${directories[dir]}`)
-  }
+function getDiretories() {
+  return Object.keys(directories);
 }
 
 function getPath(name) {
-  const path = directories[name];
+  const path = directories[name].path;
 
   const value = !!path ?
     path :
@@ -85,10 +83,16 @@ function getPath(name) {
   return value;
 }
 
+function exists(name) {
+  const directoriesKey = Object.keys(directories);
+  return directoriesKey.includes(name);
+}
+
 export default {
   open,
   add,
-  deleteDir,
-  list,
-  getPath
+  deleteDiretories,
+  getDiretories,
+  getPath,
+  exists
 }

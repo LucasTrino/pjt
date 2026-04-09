@@ -1,5 +1,24 @@
 {
-  "home": "C:/Users/Public/Documents",
-  "downloads": "C:/Users/User/Downloads",
-  "big_files": "C:/Users/Public/Documents/big_files"
+  "home": {
+    "path": "C:/Users/Public/Documents",
+    "tags": ["documents", "public"],
+    "description": "Public documents directory",
+    "scripts": {
+      "backup": "backup_documents.sh",
+      "cleanup": "cleanup_documents.sh"
+    },
+    "hooks": {
+      "onOpen": "echo 'Starting backup process...'"
+    }
+  },
+  "downloads": {
+    "path": "C:/Users/User/Downloads",
+    "tags": ["downloads"],
+    "description": "User downloads directory"
+  },
+  "big_files": {
+    "path": "C:/Users/Public/Documents/big_files",
+    "tags": ["big_files", "public"],
+    "description": "Directory for large files"
+  }
 }
