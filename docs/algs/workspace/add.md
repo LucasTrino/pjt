@@ -1,32 +1,27 @@
-INPUT: path: string, options: string
-OUTPUT: { success: boolean, errors: string[] }
+INPUT: 
+	path: string, 
+	options: object
+OUTPUT: 
+	{ success: boolean, errors: string[] }
 
-CREATE errors = a empty array
+CREATE errors: []
 
-IF name IS undefined OR name IS null
-	opens current directorie
+DEFINE counter AS directories' length
+DEFINE key AS null;
 
-IF name IS a string
-	CREATE exists = CALL exists(name)	
+IF directories[options.name] already exists
+	ADD "ERROR MESSAGE" TO errors
+	RETURN {success: false, errors}
 
-	IF exists IS NOT true
-		ADD "ERROR MESSAGE" TO errors array
-		return
+IF options.name IS undefined OR options.name IS null
+	SET key: `dir-${counter}`
 
-   	opens directorie by name
+TRY 
+	SET directories[key] AS path;
+CATCH 
+	ADD "ERROR MESSAGE" TO errors
 
-
-IF name IS an Array 
-	FOR i TO 0 FROM name.length - 1
-		CREATE exists = CALL exists(name)		
-
-		IF exists IS NOT true
-			ADD "ERROR MESSAGE" TO errors array
-		    return	
-
-        opens directories by names
-	
-IF errors array is empty
+IF errors is empty
 	SET success TO true
 ELSE 
 	SET success TO false
