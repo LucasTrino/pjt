@@ -12,14 +12,16 @@ IF name IS a string
 	IF directorie don't exists 
 		SET "ERROR MESSAGE" TO message
 		RETURN {success: false, message}
-   	opens directorie by name
+
+  opens directorie by name
 
 IF name IS an Array 
 	FOR i TO 0 FROM name.length - 1
 			IF directorie don't exists 
 				SET "ERROR MESSAGE" TO message 	
-		    	RETURN {success: false, message}
-        opens directories by names
+		    RETURN {success: false, message}
+				
+      opens directories by names
 	
 SET success TO TRUE;
 
