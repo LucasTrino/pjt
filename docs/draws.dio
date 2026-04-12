@@ -1,61 +1,61 @@
 <mxfile host="65bd71144e">
     <diagram id="oTJmHV8lB2df9trjbzEB" name="Page-1">
-        <mxGraphModel dx="1426" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="901" dy="637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="16" value="workspace" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="50" width="470" height="510" as="geometry">
+                    <mxGeometry x="20" y="50" width="480" height="510" as="geometry">
                         <mxRectangle x="40" y="30" width="100" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="30" value="+&lt;b&gt;open&lt;/b&gt;(&lt;b&gt;name?&lt;/b&gt;: string) : { sucess: boolean, errors: string[] }" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="30" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="30" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="+&lt;b&gt;add&lt;/b&gt;(&lt;b&gt;path&lt;/b&gt;: string, &lt;b&gt;options&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="60" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="60" width="480" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="+&lt;b&gt;deleteD&lt;/b&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;iretorie&lt;/b&gt;(&lt;b&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="90" width="470" height="30" as="geometry"/>
+                <mxCell id="18" value="+&lt;b&gt;remove&lt;/b&gt;(&lt;b&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
+                    <mxGeometry y="90" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+&lt;b&gt;getD&lt;/b&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;iretorie&lt;/b&gt;() : string[]&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="120" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="120" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="58" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+&lt;b&gt;exists&lt;/b&gt;(&lt;b&gt;name&lt;/b&gt;: string&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;boolean&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="150" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="150" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="46" value="+&lt;b&gt;getPath&lt;/b&gt;(&lt;b&gt;name&lt;/b&gt;: string) : string | null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="180" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="180" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="31" value="+&lt;b&gt;addTag&lt;/b&gt;(&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="210" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="210" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="54" value="+&lt;b&gt;removeTag&lt;/b&gt;(&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="240" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="240" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" value="+&lt;b&gt;getTags&lt;/b&gt;(&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;: string) : string[] | null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="270" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="270" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="67" value="+&lt;b&gt;findByTags&lt;/b&gt;(&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;string[]&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="300" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="300" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="55" value="+&lt;b&gt;addHook&lt;/b&gt;(&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;: string, &lt;b&gt;directorie&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="330" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="330" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="59" value="+&lt;b&gt;removeHook&lt;/b&gt;(&lt;b style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(63, 63, 63);&quot;&gt;name&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;: string,&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;directorie&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;: string&lt;/span&gt;) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="360" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="360" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="61" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+&lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;getHooks&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;(&lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;: string) : string[] | null&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="390" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="390" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="56" value="+&lt;b&gt;addScripts&lt;/b&gt;(&lt;b&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="420" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="420" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="63" value="+&lt;b&gt;removeScript&lt;/b&gt;(&lt;b&gt;name&lt;/b&gt;: string) :&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;{ sucess: boolean, errors: string[] }&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="450" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="450" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="64" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+&lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;getScripts&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;(&lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;name&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;: string) : string[] | null&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
-                    <mxGeometry y="480" width="470" height="30" as="geometry"/>
+                    <mxGeometry y="480" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="directoriesHandler" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="640" y="50" width="480" height="270" as="geometry">
@@ -92,6 +92,9 @@
                         <mxPoint x="360" y="190" as="targetPoint"/>
                         <Array as="points"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="69" style="edgeStyle=none;html=1;" edge="1" parent="1" source="58" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

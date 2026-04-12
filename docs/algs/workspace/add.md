@@ -2,16 +2,14 @@ INPUT:
 	path: string, 
 	options: object
 OUTPUT: 
-	{ success: boolean, errors: string[] }
-
-CREATE errors: []
+	{ success: boolean, message: string }
 
 DEFINE counter AS directories' length
 DEFINE key AS null;
 
-IF directories[options.name] already exists
-	ADD "ERROR MESSAGE" TO errors
-	RETURN {success: false, errors}
+IF directorie already exists
+	SET "ERROR MESSAGE" TO message
+	RETURN {success: false, message}
 
 IF options.name IS undefined OR options.name IS null
 	SET key: `dir-${counter}`
@@ -19,11 +17,8 @@ IF options.name IS undefined OR options.name IS null
 TRY 
 	SET directories[key] AS path;
 CATCH 
-	ADD "ERROR MESSAGE" TO errors
+	SET "ERROR MESSAGE" TO message
 
-IF errors is empty
-	SET success TO true
-ELSE 
-	SET success TO false
+SET success TO TRUE;
 	
-RETURN { success, errors }
+RETURN { success, message }
