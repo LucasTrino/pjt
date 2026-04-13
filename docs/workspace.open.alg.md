@@ -1,1 +1,0 @@
-name: array | string | undefined

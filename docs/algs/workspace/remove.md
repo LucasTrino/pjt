@@ -1,17 +1,34 @@
 INPUT: 
-	name: string, 
+	name: 
+		string ||
+		string[]
 OUTPUT: 
 	{ success: boolean, message: string }	
 
-IF directorie don't exists
-	ADD "ERROR MESSAGE" TO errors
-	RETURN {success: false, errors}
+GET directories
 
-TRY 
-	DELETE directories[name]
-CATCH 
-	ADD "ERROR MESSAGE" TO errors
+DECLARE errorMessage
+DECLARE targetDirectory
 
-SET success TO TRUE;
-	
+IF name IS a string
+	SET name AS [name]		
+
+IF name IS an array
+	FOR EACH current IN name
+		SET targetDirectory AS directories[current]
+		IF targetDirectory IS missing value
+			SET 'error_message' TO errorMessage
+			RETURN { success: false, message: errorMessage }	
+		TRY
+    		REMOVE targetDirectory FROM directories	
+		CATCH
+			SET 'error_message' TO errorMessage
+
+DECLARE success;
+
+IF errorMessage IS missing value
+	SET success TO true
+ELSE 
+	SET success TO false
+
 RETURN { success, message }

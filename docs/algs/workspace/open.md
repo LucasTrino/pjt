@@ -5,22 +5,22 @@ INPUT:
 OUTPUT: 
 	{ success: boolean, message: string }
 
-IF name IS undefined OR name IS null
-	opens current directorie
+GET directories
+
+DECLARE targetDirectory
+
+IF name IS missing value
+	OPEN current directory
 
 IF name IS a string
-	IF directorie don't exists 
-		SET "ERROR MESSAGE" TO message
-		RETURN {success: false, message}
-   	opens directorie by name
+	SET name AS [name]
 
-IF name IS an Array 
+IF name IS an array 
 	FOR i TO 0 FROM name.length - 1
-			IF directorie don't exists 
-				SET "ERROR MESSAGE" TO message 	
-		    	RETURN {success: false, message}
-        opens directories by names
+		SET targetDirectory AS GET directory BY name[i]
+		IF targetDirectory IS missing value
+			RETURN { success: false, message: 'error_message' }
+	    
+     	OPEN targetDirectory
 	
-SET success TO TRUE;
-
-RETURN { success, message }
+{ success: true, message: '' }

@@ -4,21 +4,18 @@ INPUT:
 OUTPUT: 
 	{ success: boolean, message: string }
 
-DEFINE counter AS directories' length
-DEFINE key AS null;
+GET directories
 
-IF directorie already exists
-	SET "ERROR MESSAGE" TO message
-	RETURN {success: false, message}
+DECLARE name AS options.name
 
-IF options.name IS undefined OR options.name IS null
-	SET key: `dir-${counter}`
+IF name IS missing value
+    RETURN { success: false, message: 'error_message' }
 
-TRY 
-	SET directories[key] AS path;
-CATCH 
-	SET "ERROR MESSAGE" TO message
+IF name EXISTS IN directories
+    RETURN { success: false, message: 'error_message' }
 
-SET success TO TRUE;
-	
-RETURN { success, message }
+TRY
+    SET directories[name] AS path
+    RETURN { success: true, message: '' }
+CATCH
+    RETURN { success: false, message: 'error_message' }
