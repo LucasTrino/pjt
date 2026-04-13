@@ -14,8 +14,10 @@ IF name IS missing value
 IF name EXISTS IN directories
     RETURN { success: false, message: 'error_message' }
 
+DECLARE targetDirectory AS GET directory BY name
+
 TRY
-    SET directories[name] AS path
+    SET name IN targetDirectory AS path
     RETURN { success: true, message: '' }
 CATCH
     RETURN { success: false, message: 'error_message' }

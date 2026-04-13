@@ -23,4 +23,4 @@ IF name IS an array
 	    
      	OPEN targetDirectory
 	
-{ success: true, message: '' }
+RETURN { success: true, message: '' }
