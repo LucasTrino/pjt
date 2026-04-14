@@ -1,6 +1,6 @@
 INPUT: 
-	name || 
-	name[] ||
+	name: string || 
+	name: string[] ||
 	null
 OUTPUT: 
 	{ success: boolean, message: string }

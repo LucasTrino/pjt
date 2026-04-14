@@ -1,5 +1,5 @@
 INPUT: 
-	name
+	name: string
 OUTPUT: 
 	{ success: boolean, message: string, data: string }
 
